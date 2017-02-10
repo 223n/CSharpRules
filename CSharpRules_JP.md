@@ -163,6 +163,8 @@ https://msdn.microsoft.com/ja-jp/library/ms229059(v=vs.100).aspx
 ネスト構造が深くなると、可読性が低くする原因となります。   
 
 * Ex. ネスト構造の深い例
+
+```
 if ( val1 == 1 ) {
 　if ( val2 == 2 ) {
 　　if ( val3 == 3 ) {
@@ -172,6 +174,7 @@ if ( val1 == 1 ) {
 　}
 　Method3();
 }
+```
 
 ### 5.5. アクセス権は厳格に
 
