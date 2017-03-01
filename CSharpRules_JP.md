@@ -1,5 +1,5 @@
 
-# C#開発のルール (OreOreCSharpRules)
+# C#開発のルール (CSharpRules_JP)
 
 ## 1. 本規約について
 
@@ -15,13 +15,13 @@
 https://msdn.microsoft.com/ja-jp/library/ff926074(v=vs.140).aspx
 
 * Ref. 名前に関するガイドライン
-https://msdn.microsoft.com/ja-jp/library/ms229002(v=vs.100).aspx
+https://msdn.microsoft.com/ja-jp/library/ms229002(v=vs.110).aspx
 
 * Ref. C# プログラムの一般構造 (C# プログラミング ガイド)
 https://msdn.microsoft.com/ja-jp/library/w2a9a9s3(v=vs.140).aspx
 
 * Ref. メンバーのデザインのガイドライン
-https://msdn.microsoft.com/ja-jp/library/ms229059(v=vs.100).aspx
+https://msdn.microsoft.com/ja-jp/library/ms229059(v=vs.110).aspx
 
 ## 3. 基本的なルール
 
