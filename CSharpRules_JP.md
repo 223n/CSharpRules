@@ -216,6 +216,21 @@ if文やfor文などで使用する { } は、基本的に省略するように�
 ログなど、既存の文字列の後ろに文字列を追加していく場合、   
 string同士を+では結合せず、StringBuilderのAppendメソッドなどを用いて結合します。   
 
+## 6. コード メトリックスとコード分析を行う
+
+### 6.1. コード メトリックス
+    
+コード メトリックスを行うと、保守容易性インデックスなどの確認を行うことができます。    
+チェックイン(コミット)前に、必ず実行して数値の確認を行います。    
+これらの値が、注意閾値を下回らないように気をつけて実装を行うことで、    
+一定の水準を満たす実装を行うことができます。    
+
+### 6.2. コード分析
+       
+コード分析もコード メトリックスと同様に行います。   
+コード分析では、あらかじめ決められたルールに基づいて、実装の注意点などを分析、警告を行います。   
+警告が無くなるように実装することで、一定のルールに従った実装を行うことができます。   
+   
 ## ライセンス
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.ja"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />この <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">作品</span> は <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.ja">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a>
