@@ -21,13 +21,13 @@
 
 　本ルールは、これらをベースに記載していますので、ご一読ください。
 
-* Ref. [C#のコーディング規則 (C# プログラミング ガイド)](https://docs.microsoft.com/ja-jp/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
+* Ref. [C#のコーディング規則 (C# プログラミング ガイド)](<https://docs.microsoft.com/ja-jp/dotnet/csharp/programming-guide/inside-a-program/coding-conventions> "C#のコーディング規則 (C# プログラミング ガイド)")
 
-* Ref. [名前に関するガイドライン](https://msdn.microsoft.com/ja-jp/library/ms229002(v=vs.110).aspx)
+* Ref. [名前に関するガイドライン](<https://msdn.microsoft.com/ja-jp/library/ms229002(v=vs.110).aspx> "名前に関するガイドライン")
 
-* Ref. [C# プログラムの一般構造 (C# プログラミング ガイド)](https://docs.microsoft.com/ja-jp/dotnet/csharp/programming-guide/inside-a-program/general-structure-of-a-csharp-program)
+* Ref. [C# プログラムの一般構造 (C# プログラミング ガイド)](<https://docs.microsoft.com/ja-jp/dotnet/csharp/programming-guide/inside-a-program/general-structure-of-a-csharp-program> "C# プログラムの一般構造 (C# プログラミング ガイド)")
 
-* Ref. [メンバーのデザインのガイドライン](https://msdn.microsoft.com/ja-jp/library/ms229059(v=vs.110).aspx)
+* Ref. [メンバーのデザインのガイドライン](<https://msdn.microsoft.com/ja-jp/library/ms229059(v=vs.110).aspx> "メンバーのデザインのガイドライン")
 
 ## 3. 基本的なルール
 
@@ -286,8 +286,8 @@ if文やfor文などで使用する { } は、基本的に省略するように�
 
 ## ライセンス
 
-This documents are licensed under [CC4](http://creativecommons.org/licenses/by/4.0/deed.ja).
+This documents are licensed under [CC4](<http://creativecommons.org/licenses/by/4.0/deed.ja>).
 
-この文章は、[クリエイティブ・コモンズ 表示 4.0 国際 ライセンス](http://creativecommons.org/licenses/by/4.0/deed.ja)の下に提供されています。
+この文章は、[クリエイティブ・コモンズ 表示 4.0 国際 ライセンス](<http://creativecommons.org/licenses/by/4.0/deed.ja>)の下に提供されています。
 
-[![CC4](https://i.creativecommons.org/l/by/4.0/88x31.png "CC4")](http://creativecommons.org/licenses/by/4.0/deed.ja)
+[![CC4](<https://i.creativecommons.org/l/by/4.0/88x31.png> "CC4")](<http://creativecommons.org/licenses/by/4.0/deed.ja>)
