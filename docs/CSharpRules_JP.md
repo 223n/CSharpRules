@@ -35,7 +35,7 @@
 
 * 名前付け形式
   * Camel形式
-  * Ex. employeeID, userName
+* Ex. employeeID, userName
 
 ### 3.2. プロパティ, メソッド, イベント
 
@@ -45,7 +45,8 @@
 
 ### 3.3. コントロール名, イベントハンドラメソッド
 
-* 名前付け形式　Pascal形式
+* 名前付け形式
+  * Pascal形式
 * Ex. CancelButton, CancelButton_Click
 * Note.
   * Visual Studioでは、イベントハンドラメソッドを自動生成することができます。
@@ -69,7 +70,7 @@
 | コレクションクラス   | ...Collection          | EmployeeCollection     |
 | 属性クラス           | ...Attribute           | DisplayAttribute       |
 | 抽象クラス 　　　    | Abstract...            | AbstractCompany        |
-| 例外クラス 　　　    | (Event名) + EventArgs  | MouseEventArgs         |
+| 例外クラス 　　　    | (Event名) + EventArgs  | MouseClickEventArgs    |
 
 ### 4.2. インターフェース
 
@@ -159,7 +160,7 @@
 * 例外
   * クラス名と同名を名前に付ける場合、例外でEnumのサフィックス(接尾辞)をつける
 * Ex.
-  * ClassAEnum
+  * TeamAEnum
 
 ### 4.9. コントロール名
 
