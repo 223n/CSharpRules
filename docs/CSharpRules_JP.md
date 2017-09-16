@@ -197,7 +197,7 @@ public delegate void MouseClickEventHandler(object sender, MouseEventArgs e);
 
 列挙型は，Pascal形式で命名します。
 
-また，例外を除いてサフィックス(接尾辞)はつけません。
+また，クラス名と同じになってしまうといった例外を除いて，サフィックス(接尾辞)はつけません。
 
 ```cs
 public class Teams {
