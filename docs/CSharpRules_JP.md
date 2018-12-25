@@ -328,18 +328,7 @@ if ( val == null ) return null;
 
 警告が無くなるように実装することで，一定のルールに従った実装を行うことができます。
 
-## ライセンス
-
-This documents are licensed under [CC4][linkLisenceEn].
-
-この文章は，[クリエイティブ・コモンズ 表示 4.0 国際 ライセンス][linkLisenceJa]の下に提供されています。
-
-[![CC4][linkLicenseImg]][linkLisenceJa]
-
 [link1]: https://docs.microsoft.com/ja-jp/dotnet/csharp/programming-guide/inside-a-program/coding-conventions "C#のコーディング規則 (C# プログラミング ガイド"
 [link2]: https://msdn.microsoft.com/ja-jp/library/ms229002(v=vs.110).aspx "名前に関するガイドライン"
 [link3]: https://docs.microsoft.com/ja-jp/dotnet/csharp/programming-guide/inside-a-program/general-structure-of-a-csharp-program "C# プログラムの一般構造 (C# プログラミング ガイド)"
 [link4]: https://msdn.microsoft.com/ja-jp/library/ms229059(v=vs.110).aspx "メンバーのデザインのガイドライン"
-[linkLisenceEn]: http://creativecommons.org/licenses/by/4.0/ "CC4"
-[linkLisenceJa]: http://creativecommons.org/licenses/by/4.0/deed.ja "CC4"
-[linkLicenseImg]: https://i.creativecommons.org/l/by/4.0/88x31.png "CC4"
