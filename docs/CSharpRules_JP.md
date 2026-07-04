@@ -47,6 +47,10 @@ public void SampleMethod(string userName) {
 }
 ```
 
+- Note.
+  - 本規約では、Privateなフィールドに`f`のプレフィックス（接頭辞）を付けています。
+  - 現行のMicrosoft社のコーディング規則では、`_`（アンダースコア）のプレフィックスが一般的です。
+
 ### 3.2. 名前空間、クラス、プロパティ、メソッド、イベント
 
 名前空間やクラス、プロパティ、メソッド、イベントは、Pascal形式で命名します。
@@ -141,6 +145,7 @@ private void UserNameEdit_Enter(object sender, System.EventArgs e) {
 | ファクトリーメソッド | Create + オブジェクト名 | CreateEmployee     |
 | 初期化               | Initialize + 初期化名   | InitializeProperty |
 |                      | Init + 初期化名         | InitEventHandler   |
+| 非同期メソッド       | 動詞句 + Async          | LoadDataAsync      |
 
 ### 4.4. プロパティ
 
@@ -150,13 +155,13 @@ private void UserNameEdit_Enter(object sender, System.EventArgs e) {
 
 下表のプロパティについては、適切なサフィックス（接尾辞）、プレフィックス（接頭辞）を付けます。
 
-| 要素   | 規則         | Ex.         |
-| :----- | :----------- | :---------- |
-| Bool型 | Is + 形容詞  | IsEdited    |
-|        | Can + 動詞   | CanEdit     |
-|        | Allow + 名詞 | AllowEdit   |
-| Enum型 | 名詞 + Mode  | EditMode    |
-|        | 名詞 + Type  | UserType    |
+| 要素   | 規則         | Ex.       |
+| :----- | :----------- | :-------- |
+| Bool型 | Is + 形容詞  | IsEdited  |
+|        | Can + 動詞   | CanEdit   |
+|        | Allow + 名詞 | AllowEdit |
+| Enum型 | 名詞 + Mode  | EditMode  |
+|        | 名詞 + Type  | UserType  |
 
 ### 4.5. イベント
 
@@ -204,7 +209,7 @@ public delegate void MouseClickEventHandler(object sender, MouseEventArgs e);
 public class Teams {
 
   // 列挙型
-  public enum TeamType {
+  public enum Team {
     ENL,
     RES,
     RAY
@@ -325,6 +330,8 @@ if ( val == null ) return null;
 
 ログなど、既存の文字列の後ろに文字列を追加していく場合、`string`同士を`+`では結合せず、
 `System.Text.StringBuilder`の`Append`メソッドなどを用いて結合します。
+
+なお、短い文字列を連結する場合は、文字列補間（`$"..."`）の使用を推奨します。
 
 ## 6. コードメトリックスとコード分析を行う
 
