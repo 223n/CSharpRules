@@ -1,1 +1,8 @@
+# テキストファイルは自動判別し、リポジトリ内はLFで正規化する
+* text=auto
+
+# ドキュメント
+*.md text diff=markdown
+
+# バイナリファイル（Git LFS管理）
 *.pdf filter=lfs diff=lfs merge=lfs -text
