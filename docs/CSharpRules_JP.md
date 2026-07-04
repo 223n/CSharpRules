@@ -1,4 +1,4 @@
-# C#開発のルール (CSharpRules_JP)
+# C#開発のルール(CSharpRules_JP)
 
 ## 0. 本規約で使用されている略称
 
@@ -12,25 +12,25 @@
 
 このルールは、基本的に開発での命名ルールなどをまとめたものです。
 
-細かい点については、自身のルールに作りかえて利用していただければ嬉しく思います。
+細かい点については、自身のルールに作りかえて利用していただければうれしく思います。
 
 ## 2. C#コーディング関係のガイドラインについて
 
-Microsoft社がMSDNで基本的なC#のコーディング規約などを公開しています。
+Microsoft社がMicrosoft Learnで基本的なC#のコーディング規約などを公開しています。
 
 本ルールは、これらをベースに記載していますので、ご一読ください。
 
-* Ref. [C#のコーディング規則 (C# プログラミング ガイド)][link1]
+- Ref. [C#のコーディング規則 (C# プログラミング ガイド)][link1]
 
-* Ref. [名前に関するガイドライン][link2]
+- Ref. [名前に関するガイドライン][link2]
 
-* Ref. [C# プログラムの一般構造 (C# プログラミング ガイド)][link3]
+- Ref. [C# プログラムの一般構造 (C# プログラミング ガイド)][link3]
 
-* Ref. [メンバーのデザインのガイドライン][link4]
+- Ref. [メンバーのデザインのガイドライン][link4]
 
 ## 3. 基本的なルール
 
-### 3.1. Private フィールド, パラメーター(引数), 変数
+### 3.1. Privateフィールド、パラメーター（引数）、変数
 
 Privateなフィールドや、メソッドのパラメーター（引数）、メソッド内の変数などは、Camel形式で命名します。
 
@@ -47,7 +47,11 @@ public void SampleMethod(string userName) {
 }
 ```
 
-### 3.2. 名前空間、クラス、プロパティ, メソッド, イベント
+- Note.
+  - 本規約では、Privateなフィールドに`f`のプレフィックス（接頭辞）を付けています。
+  - 現行のMicrosoft社のコーディング規則では、`_`（アンダースコア）のプレフィックスが一般的です。
+
+### 3.2. 名前空間、クラス、プロパティ、メソッド、イベント
 
 名前空間やクラス、プロパティ、メソッド、イベントは、Pascal形式で命名します。
 
@@ -62,21 +66,21 @@ namespace SystemName.WinForms {
     public string UserId { get; set; }
 
     // メソッド
-    public Login() {
+    public void Login() {
       return;
     }
 
     // イベント
-    public event EventHandler LoginCompleted();
+    public event EventHandler LoginCompleted;
 
   }
 
 }
 ```
 
-### 3.3. コントロール名, イベントハンドラーメソッド
+### 3.3. コントロール名、イベントハンドラーメソッド
 
-WinFormなどでデザイナーに貼り付けるコントロールや、イベントを紐づけているメソッドは、Pascal形式で命名します。
+Windows Formsなどでデザイナーに貼り付けるコントロールや、イベントを紐づけているメソッドは、Pascal形式で命名します。
 
 ```cs
 // コントロール
@@ -88,9 +92,9 @@ private void UserNameEdit_Enter(object sender, System.EventArgs e) {
 }
 ```
 
-* Note.
-  * Visual Studioでは、イベントハンドラーメソッドを自動生成できます。
-  * 自動生成されるイベントハンドラーメソッドは、「（コントロール名）_（イベント名）」の形式で名前が自動的に付けられるため、
+- Note.
+  - Visual Studioでは、イベントハンドラーメソッドを自動生成できます。
+  - 自動生成されるイベントハンドラーメソッドは、「（コントロール名）_（イベント名）」の形式で名前が自動的に付けられるため、
     ここでは、`3.2.`を満たすためにPascal形式で名前を付けています。
 
 ## 4. 命名の規則
@@ -103,14 +107,14 @@ private void UserNameEdit_Enter(object sender, System.EventArgs e) {
 
 下表のクラスについては、適切なサフィックス（接尾辞）、プレフィックス（接頭辞）を付けます。
 
-| 要素               | 規則                  | Ex.                   |
-| :----------------- | :-------------------- | :-------------------- |
-| 例外クラス         | ...Exception          | ArgumentNullException |
-| テストクラス       | ...Test               | EmployeeTest          |
-| コレクションクラス | ...Collection         | EmployeeCollection    |
-| 属性クラス         | ...Attribute          | DisplayAttribute      |
-| 抽象クラス         | Abstract...           | AbstractCompany       |
-| 例外クラス         | (Event名) + EventArgs | MouseClickEventArgs   |
+| 要素               | 規則                       | Ex.                   |
+| :----------------- | :------------------------- | :-------------------- |
+| 例外クラス         | ...Exception               | ArgumentNullException |
+| テストクラス       | ...Test                    | EmployeeTest          |
+| コレクションクラス | ...Collection              | EmployeeCollection    |
+| 属性クラス         | ...Attribute               | DisplayAttribute      |
+| 抽象クラス         | Abstract...                | AbstractCompany       |
+| イベント引数クラス | （イベント名） + EventArgs | MouseClickEventArgs   |
 
 ### 4.2. インターフェイス
 
@@ -136,11 +140,12 @@ private void UserNameEdit_Enter(object sender, System.EventArgs e) {
 | 要素                 | 規則                    | Ex.                |
 | :------------------- | :---------------------- | :----------------- |
 | 戻り値がBool型       | Is + 形容詞             | IsEdited           |
-|                      | Can + 動詞              | CanEditable        |
+|                      | Can + 動詞              | CanEdit            |
 |                      | Has + 名詞              | HasError           |
-| ファクトリーメソッド | Create + オブジェクト名 | ToString           |
+| ファクトリーメソッド | Create + オブジェクト名 | CreateEmployee     |
 | 初期化               | Initialize + 初期化名   | InitializeProperty |
 |                      | Init + 初期化名         | InitEventHandler   |
+| 非同期メソッド       | 動詞句 + Async          | LoadDataAsync      |
 
 ### 4.4. プロパティ
 
@@ -150,13 +155,13 @@ private void UserNameEdit_Enter(object sender, System.EventArgs e) {
 
 下表のプロパティについては、適切なサフィックス（接尾辞）、プレフィックス（接頭辞）を付けます。
 
-| 要素   | 規則         | Ex.         |
-| :----- | :----------- | :---------- |
-| Bool型 | Is + 形容詞  | IsEdited    |
-|        | Can + 動詞   | CanEditable |
-|        | Allow + 名詞 | AllowEdit   |
-| Enum型 | 名詞 + Mode  | EditMode    |
-|        | 名詞 + Type  | UserType    |
+| 要素   | 規則         | Ex.       |
+| :----- | :----------- | :-------- |
+| Bool型 | Is + 形容詞  | IsEdited  |
+|        | Can + 動詞   | CanEdit   |
+|        | Allow + 名詞 | AllowEdit |
+| Enum型 | 名詞 + Mode  | EditMode  |
+|        | 名詞 + Type  | UserType  |
 
 ### 4.5. イベント
 
@@ -198,13 +203,13 @@ public delegate void MouseClickEventHandler(object sender, MouseEventArgs e);
 
 列挙型は、Pascal形式で命名します。
 
-また、クラス名と同じになってしまうといった例外を除いて、サフィックス（接尾辞）はつけません。
+また、クラス名と同じになってしまうといった例外を除いて、サフィックス（接尾辞）は付けません。
 
 ```cs
 public class Teams {
 
   // 列挙型
-  public enum TeamType {
+  public enum Team {
     ENL,
     RES,
     RAY
@@ -227,15 +232,15 @@ public class Teams {
 
 ## 5. コーディング時に意識すること
 
-### 5.1. １メソッドあたり３０行以内におさめる
+### 5.1. 1メソッドあたり30行以内におさめる
 
 1メソッドあたりの行数は、30行以内におさまるように目指します。
 
-30行を超える場合は、以下を参考におさまるようリファクタリングを行います。
+30行を超える場合は、`5.2.`以降を参考に、おさまるようリファクタリングを行います。
 
-ただし、`Switch`を使用している場合は例外です。
+ただし、`switch`を使用している場合は例外です。
 
-### 5.2. １メソッドは１機能のみ
+### 5.2. 1メソッドは1機能のみ
 
 1つのメソッドに複数の機能を持たせると、再利用性が低くなる原因となります。
 
@@ -245,7 +250,7 @@ public class Teams {
 
 ### 5.3. 不要なコードは削除する
 
-ソースコードをTeamFoundationServerやGitなどで適切に管理している場合、
+ソースコードをTeam Foundation ServerやGitなどで適切に管理している場合、
 不要なソースコードやコメントは削除すべきです。
 
 不要なソースコードやコメントは、可読性を低くする原因となります。
@@ -256,17 +261,17 @@ public class Teams {
 
 もし、深くなってしまう場合には、複数のメソッドに分けるなど、メソッドの再設計を検討します。
 
-ネスト構造が深くなると、可読性が低くする原因となります。
+ネスト構造が深くなると、可読性を低くする原因となります。
 
 ```cs
 if ( val1 == 1 ) {
-　if ( val2 == 2 ) {
-　　if ( val3 == 3 ) {
-　　　Method1();
-　　}
-　　Method2();
-　}
-　Method3();
+  if ( val2 == 2 ) {
+    if ( val3 == 3 ) {
+      Method1();
+    }
+    Method2();
+  }
+  Method3();
 }
 ```
 
@@ -276,16 +281,26 @@ if ( val1 == 1 ) {
 
 アクセス権を厳格にしておくことで、外部のクラスなどから不要な項目が見えなくなります。
 
-これにより、意図しない外部からのメソッドの呼び出しや値の変更などを防ぐことができます。
+これにより、意図しない外部からのメソッドの呼び出しや値の変更などを防げます。
 
 また、Visual Studioなどを使用した際に、
-目的のプロパティやメソッドなどを早く見つけることが可能となります。
+目的のプロパティやメソッドなどを早く見つけられるようになります。
 
-### 5.6. if, for, usingなどの { } は基本省略する
+### 5.6. if、for、usingなどの { } は省略しない
 
-if文やfor文などで使用する { } は、基本的に省略するようにします。
+if文やfor文などで使用する { } は、処理が1行であっても省略せずに記述します。
+
+{ } を省略すると、後から処理を追加した際に意図しないバグを生む恐れがあります。
+
+Microsoft社のコーディング規則でも { } の使用が推奨されています。
 
 ```cs
+// 良い例
+if ( val == null ) {
+  return null;
+}
+
+// 悪い例
 if ( val == null ) return null;
 ```
 
@@ -301,7 +316,7 @@ if ( val == null ) return null;
 ### 5.8. イベントハンドラーの設定はロジック内で
 
 イベントハンドラーの設定は、初期化メソッド（`InitializeEventHandler`など）に
-まとめてコードを書いておくことをオススメします。
+まとめてコードを書いておくことを推奨します。
 
 そうすることで、イベントハンドラーの設定が完了しているかを確認できます。
 
@@ -309,33 +324,35 @@ if ( val == null ) return null;
 
 イベントハンドラーメソッド内では処理を行わず、処理が定義されているメソッドを呼び出すようにします。
 
-そうすることで複数のイベントハンドラーメソッドでの機能の重複を防ぎ、再利用性を高めることができます。
+そうすることで複数のイベントハンドラーメソッドでの機能の重複を防ぎ、再利用性を高められます。
 
 ### 5.10. ログなどで文字列を結合する場合には、StringBuilderを使う
 
-ログなど、既存の文字列の後ろに文字列を追加していく場合、``string``同士を``+``では結合せず、
-``System.Text.StringBuilder``の``Append``メソッドなどを用いて結合します。
+ログなど、既存の文字列の後ろに文字列を追加していく場合、`string`同士を`+`では結合せず、
+`System.Text.StringBuilder`の`Append`メソッドなどを用いて結合します。
 
-## 6. コード メトリックスとコード分析を行う
+なお、短い文字列を連結する場合は、文字列補間（`$"..."`）の使用を推奨します。
 
-### 6.1. コード メトリックス
+## 6. コードメトリックスとコード分析を行う
 
-コード メトリックスを行うと、保守容易性インデックスなどの確認を行うことができます。
+### 6.1. コードメトリックス
+
+コードメトリックスを行うと、保守容易性インデックスなどを確認できます。
 
 チェックイン（コミット）前に、必ず実行して数値の確認を行います。
 
-これらの値が、注意閾値を下回らないように気をつけて実装を行うことで、
-一定の水準を満たす実装を行うことができます。
+これらの値が、注意閾値を下回らないように気をつけることで、
+一定の水準を満たす実装ができます。
 
 ### 6.2. コード分析
 
-コード分析もコード メトリックスと同様に行います。
+コード分析もコードメトリックスと同様に行います。
 
 コード分析では、あらかじめ決められたルールに基づいて、実装の注意点などを分析、警告を行います。
 
-警告が無くなるように実装することで、一定のルールに従った実装を行うことができます。
+警告が無くなるように実装することで、一定のルールに従った実装ができます。
 
-[link1]: https://docs.microsoft.com/ja-jp/dotnet/csharp/programming-guide/inside-a-program/coding-conventions "C#のコーディング規則 (C# プログラミング ガイド"
-[link2]: https://msdn.microsoft.com/ja-jp/library/ms229002(v=vs.110).aspx "名前に関するガイドライン"
-[link3]: https://docs.microsoft.com/ja-jp/dotnet/csharp/programming-guide/inside-a-program/general-structure-of-a-csharp-program "C# プログラムの一般構造 (C# プログラミング ガイド)"
-[link4]: https://msdn.microsoft.com/ja-jp/library/ms229059(v=vs.110).aspx "メンバーのデザインのガイドライン"
+[link1]: https://learn.microsoft.com/ja-jp/dotnet/csharp/fundamentals/coding-style/coding-conventions "C#のコーディング規則 (C# プログラミング ガイド)"
+[link2]: https://learn.microsoft.com/ja-jp/dotnet/standard/design-guidelines/naming-guidelines "名前に関するガイドライン"
+[link3]: https://learn.microsoft.com/ja-jp/dotnet/csharp/fundamentals/program-structure/ "C# プログラムの一般構造 (C# プログラミング ガイド)"
+[link4]: https://learn.microsoft.com/ja-jp/dotnet/standard/design-guidelines/member "メンバーのデザインのガイドライン"
