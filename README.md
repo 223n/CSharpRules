@@ -1,8 +1,12 @@
-﻿# CSharpRules
+# CSharpRules
 
 C#の開発ルールなどをまとめています。
 
 活用していただければうれしく思います。
+
+## Rules
+
+- [CSharpRules(JP)](docs/CSharpRules_JP.md)
 
 ## Link
 
